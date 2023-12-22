@@ -1,11 +1,11 @@
 * {
     background-color: #1A1A22;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .header-wrapper {
     height: 80px;
-    background-color: #010c15;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     width: 100vw;
@@ -29,11 +29,12 @@
 
 .header-list ul li{
     margin: 0 25px;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .header-list ul li a {
-    color: aqua;
+    color: white;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
