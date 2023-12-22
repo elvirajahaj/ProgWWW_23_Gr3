@@ -33,3 +33,7 @@
     color: aqua;
     text-decoration: none;
 }
+
+.header-list ul li a:hover {
+    color: #0A8E95;
+}
