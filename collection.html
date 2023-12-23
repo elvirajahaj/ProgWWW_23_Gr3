@@ -43,5 +43,46 @@
         </nav>
       </header>
     </div>
+
+  <div style="margin-top: 200px">
+    <h1>Collection</h1>
+    <div id="collection-container">
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const apiUrl = 'https://example-data.draftbit.com/sneakers?_limit=10';
+
+    axios.get(apiUrl)
+      .then(response => {
+        const data = response.data;
+        console.log(data[0].media.imageUrl);
+        const container = document.getElementById("collection-container");
+
+        data.forEach(item => {
+          const sneakerItem = document.createElement('div');
+          sneakerItem.classList.add('sneaker-item');
+
+          const headerElement = document.createElement("h1");
+          headerElement.innerText = item.brand;
+
+          const header2Element = document.createElement("h3");
+          header2Element.innerText = item.title;
+
+          const imageElement = document.createElement('img');
+          imageElement.src = item.media.smallImageUrl;
+
+          sneakerItem.appendChild(headerElement);
+          sneakerItem.appendChild(header2Element);
+          sneakerItem.appendChild(imageElement);
+          container.appendChild(sneakerItem);
+        })
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  </script>
   </body>
 </html>
