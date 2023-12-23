@@ -41,3 +41,25 @@
 .header-list ul li a:hover {
     color: #0A8E95;
 }
+
+
+.header-list ul li i {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header-list ul li i:hover {
+    color: #0A8E95;
+}
+
+
+i{
+    color: white;
+}
+.searchbar{
+   height: 25px;
+    margin-right:5px ;
+    background-color: rgba(78, 74, 74, 0.144);
+   border:none;
+}
