@@ -254,7 +254,6 @@ color: white;
     transform: rotate(-20deg)
 }
 
-
 .right-side {
     display: flex;
     flex-wrap: wrap;
@@ -342,7 +341,7 @@ margin-left: 5%;
 
 .bottom2{
     display: inline-block;
-    border: 1px solid red;
+    
     margin-right:5% ;
     width: 40%;
     border: 2px groove rgba(44, 43, 43, 0.317);
@@ -368,7 +367,118 @@ margin-left: 5%;
     width: 100%;
     margin-top: 11%;
 }
+.man-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+}
 
+.card:hover {
+    box-shadow: 4px 4px 25px #0A8E95;
+}
+.cards {
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: auto;
+    border-radius: 30px;
+    background-color: #272731;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    text-align: left;
+    padding-bottom: 25px;
+    margin: 0 5px;
+}
 
+.text {
+    background-color: #272731;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 10px;
+}
 
+.text h4 {
+    font-size: 18px;
+    color: white;
+    margin: 2px;
+    background-color: #272731;
+}
+
+.text h3 {
+    font-size: 26px;
+    color: white;
+    margin: 2px;
+    font-style: italic;
+    background-color: #272731;
+}
+
+.img-container {
+    background-color: #272731;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shoeimg {
+    max-width: 185px;
+    margin: 30px 0 15px 0;
+    height: auto;
+    transform: rotate(-30deg);
+    background-color: #272731;
+}
+
+.link {
+    background-color: #0a8e95;
+    bottom: 0px;
+    right: 0px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border-radius: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-icon {
+    background-color: #0a8e95;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: auto;
+    border-radius: 30px;
+    color: white;
+    fill: white;
+}
+
+.link-icon {
+    background-color: #0A8E95;
+}
+
+.gap {
+    margin-bottom: 250px;
+}
+
+.text-heading h1 {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
