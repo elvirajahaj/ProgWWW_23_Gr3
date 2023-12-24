@@ -45,54 +45,121 @@
       </header>
     </div>
 
+    <div class="home">
+      <div id="home-container">
+        <div class="colorBlue">
+          <h2>SNEAKPEAK</h2>
+        </div>
+        <h1>
+          THE ULTIMATE
+          <span style="color: rgb(255, 115, 0); font-size: 60px">SNEAK</span>
+          SHOE <br />PARADISE
+        </h1>
+        <p style="color: gray; font-size: 14px; line-height: 20px">
+          Feel free to adapt these suggestions to set your specific context and
+          brading.
+        </p>
+        <button class="button">BUY NOW</button>
+        <h4>COLORS:</h4>
+        <div class="circle-buttons">
+          <button class="red-btn" id="red-btn"></button>
+          <button class="yellow-btn" id="yellow-btn"></button>
+          <button class="blue-btn" id="blue-btn"></button>
+          <button class="gray-btn" id="gray-btn"></button>
+        </div>
+      </div>
+      <div class="home-middle-img" id="home-middle-img">
+        <img
+          class="middle-img"
+          src="./images/redSneaker.png"
+          alt="Red Sneakers"
+          id="middle-img"
+        />
+      </div>
 
-    <div id="content">
-    
-    </div>
+      <div class="change-home-middle-image1" id="change-home-middle-image1">
+        <img
+          class="middle-img"
+          src="./images/redSneaker.png"
+          alt="Red Sneakers"
+          id="middle-img"
+        />
+      </div>
+      <div class="change-home-middle-image2" id="change-home-middle-image2">
+        <img
+          class="middle-img"
+          src="./images/yellowSneaker.png"
+          alt="Yellow Sneakers"
+          id="middle-img"
+        />
+      </div>
+      <div class="change-home-middle-image3" id="change-home-middle-image3">
+        <img
+          class="middle-img"
+          src="./images/blueSneaker.png"
+          alt="Blue Sneakers"
+          id="middle-img"
+        />
+      </div>
+      <div class="change-home-middle-image4" id="change-home-middle-image4">
+        <img
+          class="middle-img"
+          src="./images/graySneake.png"
+          alt="Gray Sneakers"
+          id="middle-img"
+        />
+      </div>
 
-  <div class="home">
-    <div id="home-container">
-      <div class="colorBlue">
-        <h2>SNEAKPEAK</h2>
-      </div>
-      <h1>THE ULTIMATE <span style="color: rgb(255, 115, 0); font-size: 60px">SNEAK</span> SHOE <br>PARADISE</h1>
-      <p style="color: gray; font-size: 14px; line-height: 20px;">Feel free to adapt these suggestions to set your specific context and brading.</p>
-      <button class="button">BUY NOW</button>
-      <h4>COLORS:</h4>
-      <div class="circle-buttons">
-        <button class="red-btn"></button>
-        <button class="yellow-btn"></button>
-        <button class="blue-btn"></button>
-        <button class="gray-btn"></button>
-      </div>
-    </div>
-    <div class="home-middle-img">
-     <img class="middle-img" src="./images/redSneaker.png" alt="Red Sneakers">
-    </div>
-
-    <div class="home-images-right" style="margin: 80px 0 0 40px;">
-      <div class="home-img-right">
-        <img id="img-colon" src="./images/redSneaker.png" alt="product-0">
-      </div><div class="home-img-right">
-        <img id="img-colon" src="./images/yellowSneaker.png" alt="product-1">
-      </div>
-      <div class="home-img-right">
-        <img id="img-colon" src="./images/blueSneaker.png" alt="product-2">
-      </div>
-      <div class="home-img-right">
-        <img id="img-colon" src="./images/graySneake.png" alt="product-3">
+      <div class="home-images-right" style="margin: 80px 0 0 40px">
+        <div class="home-img-right">
+          <img id="img-colon" src="./images/redSneaker.png" alt="product-0" />
+        </div>
+        <div class="home-img-right">
+          <img
+            id="img-colon"
+            src="./images/yellowSneaker.png"
+            alt="product-1"
+          />
+        </div>
+        <div class="home-img-right">
+          <img id="img-colon" src="./images/blueSneaker.png" alt="product-2" />
+        </div>
+        <div class="home-img-right">
+          <img id="img-colon" src="./images/graySneake.png" alt="product-3" />
+        </div>
       </div>
     </div>
-  </div>
 
     <div id="content"></div>
-
 
     <footer>
       <p>&copy; 2023 Your Website</p>
     </footer>
 
-  
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sneakers = document.querySelectorAll(
+          "[id^='change-home-middle-image']"
+        );
+        const circleButtons = document.querySelectorAll(
+          ".circle-buttons button"
+        );
 
+        circleButtons.forEach((button, index) => {
+          button.addEventListener("click", function () {
+            hideAllSneakers();
+            sneakers[index].style.display = "flex";
+            document.getElementById("home-middle-img").style.display = "none";
+          });
+        });
+
+        function hideAllSneakers() {
+          sneakers.forEach((sneaker) => {
+            sneaker.style.display = "none";
+          });
+        }
+      });
+    </script>
   </body>
 </html>
