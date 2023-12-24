@@ -62,17 +62,51 @@
         <button class="button">BUY NOW</button>
         <h4>COLORS:</h4>
         <div class="circle-buttons">
-          <button class="red-btn"></button>
-          <button class="yellow-btn"></button>
-          <button class="blue-btn"></button>
-          <button class="gray-btn"></button>
+          <button class="red-btn" id="red-btn"></button>
+          <button class="yellow-btn" id="yellow-btn"></button>
+          <button class="blue-btn" id="blue-btn"></button>
+          <button class="gray-btn" id="gray-btn"></button>
         </div>
       </div>
-      <div class="home-middle-img">
+      <div class="home-middle-img" id="home-middle-img">
         <img
           class="middle-img"
           src="./images/redSneaker.png"
           alt="Red Sneakers"
+          id="middle-img"
+        />
+      </div>
+
+      <div class="change-home-middle-image1" id="change-home-middle-image1">
+        <img
+          class="middle-img"
+          src="./images/redSneaker.png"
+          alt="Red Sneakers"
+          id="middle-img"
+        />
+      </div>
+      <div class="change-home-middle-image2" id="change-home-middle-image2">
+        <img
+          class="middle-img"
+          src="./images/yellowSneaker.png"
+          alt="Yellow Sneakers"
+          id="middle-img"
+        />
+      </div>
+      <div class="change-home-middle-image3" id="change-home-middle-image3">
+        <img
+          class="middle-img"
+          src="./images/blueSneaker.png"
+          alt="Blue Sneakers"
+          id="middle-img"
+        />
+      </div>
+      <div class="change-home-middle-image4" id="change-home-middle-image4">
+        <img
+          class="middle-img"
+          src="./images/graySneake.png"
+          alt="Gray Sneakers"
+          id="middle-img"
         />
       </div>
 
@@ -114,6 +148,28 @@
         .catch((error) => {
           console.error("Error fetching data:", error);
         });
+      document.addEventListener("DOMContentLoaded", function () {
+        const sneakers = document.querySelectorAll(
+          "[id^='change-home-middle-image']"
+        );
+        const circleButtons = document.querySelectorAll(
+          ".circle-buttons button"
+        );
+
+        circleButtons.forEach((button, index) => {
+          button.addEventListener("click", function () {
+            hideAllSneakers();
+            sneakers[index].style.display = "flex";
+            document.getElementById("home-middle-img").style.display = "none";
+          });
+        });
+
+        function hideAllSneakers() {
+          sneakers.forEach((sneaker) => {
+            sneaker.style.display = "none";
+          });
+        }
+      });
     </script>
   </body>
 </html>
