@@ -148,7 +148,6 @@ i{
     justify-content: center;
     align-items: center;
 }
-
 .home-images-right {
     display: flex;
     flex-direction: column;
@@ -161,6 +160,27 @@ i{
     border-radius: 5px;
     margin: 10px 0;
     width: 130px;
+}
+
+.change-home-middle-image1{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.change-home-middle-image2{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.change-home-middle-image3{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.change-home-middle-image4{
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 
