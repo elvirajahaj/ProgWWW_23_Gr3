@@ -597,4 +597,25 @@ input{
     height: 1px;
 }
 
-  
+/** Collection */
+.back-btn {
+    background-color: #0a8e95;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.back-btn:hover {
+    background-color: #037379;
+}
+
+.collection-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 400px;
+}
