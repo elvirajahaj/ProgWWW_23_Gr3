@@ -24,7 +24,9 @@
     display: flex;
     list-style-type: none;
     margin-right: 20px;
-
+    justify-content: center;
+    align-items: center;
+    align-self: center;
 }
 
 .header-list ul li{
@@ -57,10 +59,12 @@ i{
     color: white;
 }
 .searchbar{
-   height: 25px;
+    height: 35px;
     margin-right:5px ;
     background-color: rgba(78, 74, 74, 0.144);
-   border:none;
+    border:none;
+    border-radius: 5px;
+    margin-bottom: 12px;
 }
 
 .home {
@@ -583,9 +587,14 @@ input{
        
 
     }
-    .aboutus-middle-img img{
-        width: 350px;
-        height: 60%;
-    }
+.aboutus-middle-img img{
+    width: 350px;
+    height: 60%;
+}
+
+.first {
+    width: calc(100vw - 240px);
+    height: 1px;
+}
 
   
