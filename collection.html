@@ -92,13 +92,13 @@
           </g>
         </svg>
       </div>
-      <div id="product-container"></div>
+      <div id="products-container"></div>
     </div>
 
     <script src="./assets/dummydata.js"></script>
     <script>
-      const productContainer = document.getElementById("product-container");
-
+      const productContainer = document.getElementById("products-container");
+      let i = 1;
       data.products.forEach((product) => {
         const productDiv = document.createElement("div");
         const image = document.createElement("img");
@@ -106,7 +106,7 @@
         const gender = document.createElement("h6");
         const price = document.createElement("p");
 
-        image.src = product.media.imageUrl;
+        image.src = `./images/collection/${i++}.png`;
         image.alt = product.title;
         title.textContent = product.title;
         gender.textContent = "Category: " + product.gender;
