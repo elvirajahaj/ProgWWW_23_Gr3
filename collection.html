@@ -94,6 +94,7 @@
       </div>
       <div id="product-container"></div>
     </div>
+<<<<<<< HEAD
 
     <script src="./assets/dummydata.js"></script>
     <script>
@@ -120,6 +121,49 @@
       });
     </script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+=======
+    <div id="products-container">
+      
+    </div>
+  </div>
+
+  <script src="./assets/dummydata.js"></script>
+  <script>
+    const productContainer = document.getElementById('products-container');
+    let i = 1;
+    data.products.forEach(product => {
+      const productDiv = document.createElement('div');
+      const image = document.createElement('img');
+      const title = document.createElement('h5');
+      const gender = document.createElement('h6');
+      const price = document.createElement('p');
+      const button = document.createElement('button');
+      const buyLink = document.createElement('a'); 
+
+  
+      image.crossOrigin = "anonymous";
+      image.src = `./images/collection/${i++}.png`; 
+      image.alt = product.title;
+    
+      title.textContent = product.title;
+      gender.textContent = 'Category: ' + product.gender;
+      price.textContent = 'Price: $' + product.retailPrice;
+      button.textContent = "Buy Now";
+      button.className = "button";
+      buyLink.href="#";
+      buyLink.appendChild(button);
+
+      productDiv.appendChild(image);
+      productDiv.appendChild(title);
+      productDiv.appendChild(gender);
+      productDiv.appendChild(price);
+      productDiv.appendChild(buyLink);
+
+      productContainer.appendChild(productDiv);
+    })
+  </script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+>>>>>>> 91642c6b9fcc5d6d1b86beed0fea916df9cd7d4a
   <script>
     const apiUrl = 'https://example-data.draftbit.com/sneakers?_limit=10';
 
