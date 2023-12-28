@@ -105,6 +105,12 @@
         const title = document.createElement("h5");
         const gender = document.createElement("h6");
         const price = document.createElement("p");
+        const button = document.createElement('button');
+        const buyLink = document.createElement('a');
+        button.textContent = "Buy Now";
+        button.className = "button";
+        buyLink.href = "#";
+        buyLink.appendChild(button); 
 
         image.src = `./images/collection/${i++}.png`;
         image.alt = product.title;
@@ -116,6 +122,7 @@
         productDiv.appendChild(title);
         productDiv.appendChild(gender);
         productDiv.appendChild(price);
+        productDiv.appendChild(buyLink);
         productContainer.appendChild(productDiv);
       });
     </script>

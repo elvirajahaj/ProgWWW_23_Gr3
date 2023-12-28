@@ -677,3 +677,7 @@ input{
 #products-container a {
     background-color: #272731;
 }
+
+#products-container button:hover {
+    cursor: pointer;
+}
