@@ -43,5 +43,64 @@
         </nav>
       </header>
     </div>
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <h1 style="color: white">WOMAN COLLECTION</h1>
+        <img
+          class="img"
+          src="images/woman/1.png"
+          alt="Woman Sneakers"
+          style="width: 50%"
+        />
+      </div>
+      <div class="slide fade">
+        <h1 style="color: white">WOMAN COLLECTION</h1>
+        <img
+          class="img"
+          src="images/woman/2.png"
+          alt="Woman Sneakers"
+          style="width: 50%"
+        />
+      </div>
+      <div class="slide fade">
+        <h1 style="color: white">WOMAN COLLECTION</h1>
+        <img
+          class="img"
+          src="images/woman/3.png"
+          alt="Woman Sneakers"
+          style="width: 50%"
+        />
+      </div>
+      <div class="slide fade" style="margin-top: 10%">
+        <h1 style="color: white">WOMAN COLLECTION</h1>
+        <img
+          class="img"
+          src="images/collection/6.png"
+          alt="Woman Sneakers"
+          style="width: 50%"
+        />
+      </div>
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+      }
+    </script>
   </body>
 </html>
