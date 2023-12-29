@@ -38,6 +38,15 @@
                 />
                 <i class="fa-solid fa-magnifying-glass" id="searchicon"></i>
               </li>
+              <li>
+                <button
+                  class="navbutton"
+                  id="navbutton"
+                  onclick="location.href='login.html'"
+                >
+                  Log In
+                </button>
+              </li>
             </ul>
           </div>
         </nav>
@@ -105,12 +114,12 @@
         const title = document.createElement("h5");
         const gender = document.createElement("h6");
         const price = document.createElement("p");
-        const button = document.createElement('button');
-        const buyLink = document.createElement('a');
+        const button = document.createElement("button");
+        const buyLink = document.createElement("a");
         button.textContent = "Buy Now";
         button.className = "button";
         buyLink.href = "#";
-        buyLink.appendChild(button); 
+        buyLink.appendChild(button);
 
         image.src = `./images/collection/${i++}.png`;
         image.alt = product.title;
