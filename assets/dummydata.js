@@ -1,7 +1,7 @@
 const data = {
     products: [
       {
-        id: "a",
+        id: 1,
         brand: "Air Jordan",
         colorway: "Team Red/Sail/Muslin/University Red",
         gender: "Women's",
@@ -18,7 +18,7 @@ const data = {
       },
   
       {
-        id: "b",
+        id: 2,
         brand: "Jordan",
         colorway: "Tour Yellow/Black/White/Black",
         gender: "Men's",
@@ -35,7 +35,7 @@ const data = {
       },
   
       {
-        id: "c",
+        id: 3,
         brand: "Jordan",
         colorway: "Noise Aqua/Dark Obsidian/Glacier Blue/Blue Lightning",
         gender: "Men's",
@@ -51,7 +51,7 @@ const data = {
       },
   
       {
-        id: "d",
+        id: 4,
         brand: "Nike Jordan",
         colorway: "Light Bone/Iron Grey/White/Magma Orange",
         gender: "Men's",
@@ -67,7 +67,7 @@ const data = {
       },
   
       {
-        id: "e",
+        id: 5,
         brand: "Jordan",
         colorway: "Black/University Red/Bright Concord/White",
         gender: "Women's",
@@ -84,7 +84,7 @@ const data = {
       },
   
       {
-        id: "f",
+        id: 6,
         brand: "Puma",
         colorway: "White-Black-Shadow Gray",
         gender: "Men's",
@@ -101,7 +101,7 @@ const data = {
       },
   
       {
-        id: "g",
+        id: 7,
         brand: "Cat",
         colorway: "Dash Grey/Signal Coral/Blue Sport",
         gender: "Kid's",
@@ -118,7 +118,7 @@ const data = {
       },
   
       {
-        id: "h",
+        id: 8,
         brand: "Nike",
         colorway: "Green/White",
         gender: "Men's",
@@ -135,7 +135,7 @@ const data = {
       },
   
       {
-        id: "i",
+        id: 9,
         brand: "Nike",
         colorway: "Summit White/Light Silver/Stadium Green/Black",
         gender: "Men's",
@@ -152,7 +152,7 @@ const data = {
       },
   
       {
-        id: "j",
+        id: 10,
         brand: "Nike",
         colorway: "Black/Dark Smoke Grey/Smoke Grey/White",
         gender: "Men's",
@@ -169,7 +169,7 @@ const data = {
       },
   
       {
-        id: "k",
+        id: 11,
         brand: "Nike",
         colorway: "True Blue/Sail/Topaz Gold",
         gender: "Men's",
@@ -186,7 +186,7 @@ const data = {
       },
   
       {
-        id: "l",
+        id: 12,
         brand: "Nike",
         colorway: "Cloud White/Cloud White/Cloud White",
         gender: "Men's",
@@ -204,7 +204,7 @@ const data = {
   
       //woomen
       {
-        id: "m",
+        id: 13,
         brand: "Nike Air",
         colorway: "White/Pure Platinum/Fuchsia Dream/Black",
         gender: "Women's",
@@ -221,7 +221,7 @@ const data = {
       },
   
       {
-        id: "n",
+        id: 14,
         brand: "Nike Air",
         colorway: " Grain/Deep Royal Blue/Polar/Grain",
         gender: "Women's",
@@ -238,7 +238,7 @@ const data = {
       },
   
       {
-        id: "o",
+        id: 15,
         brand: "Nike Air",
         colorway: "Sky J Light Purple/Barely Grape/Guava Ice/Sky J Purple",
         gender: "Women's",
@@ -255,7 +255,7 @@ const data = {
       },
   
       {
-        id: "p",
+        id: 16,
         brand: "Nike Air",
         colorway: "T Lemon Wash/White/Lapis",
         gender: "Women's",
