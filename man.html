@@ -12,6 +12,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .man {
+        margin-top: 200px;
+      }
+
+      #man {
+        width: 40%;
+      }
+    </style>
   </head>
   <body>
     <div class="header-wrapper">
@@ -19,7 +28,7 @@
       <header>
         <!--navbar-->
         <nav>
-          <div class="header-list">
+          <div class="header-list" id="header-list1">
             <ul>
               <li><a href="index.html" target="">Home</a></li>
               <li><a href="man.html" target="">Man</a></li>
@@ -91,26 +100,13 @@
         />
       </div>
     </div>
+    <div class="man">
+      <div id="products-container">
 
-    <script>
-      let slideIndex = 0;
-      showSlides();
+      </div>
+    </div>
 
-      function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("slide");
-
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-          slideIndex = 1;
-        }
-
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3000); // Change image every 2 seconds
-      }
-    </script>
+    <script src="./assets/dummydata.js"></script>    
+    <script src="./man.js"></script>
   </body>
 </html>

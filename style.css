@@ -727,3 +727,8 @@ input{
     to {opacity: 1;}
 
 }
+
+#products-container #man {
+    width: 30%;
+    margin: 20px 10px;
+}
