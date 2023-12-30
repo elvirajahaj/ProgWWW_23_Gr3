@@ -17,33 +17,43 @@ function showSlides() {
   setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
 
-const productContainer = document.getElementById("products-container");
-let i = 1;
-data.products.forEach((product) => { 
-if (product.gender.toLowerCase() == "women's")  {
-  const productDiv = document.createElement("div");
-  const image = document.createElement("img");
-  const title = document.createElement("h5");
-  const gender = document.createElement("h6");
-  const price = document.createElement("p");
-  const button = document.createElement("button");
-  const buyLink = document.createElement("a");
-  productDiv.id = "man";
-  button.textContent = "Buy Now";
-  button.className = "button";
-  buyLink.href = "#";
-  buyLink.appendChild(button);
+document.addEventListener("DOMContentLoaded", function () {
+    const productContainer = document.getElementById("products-container");
+    let i = 1;
 
-  image.src = `./images/collection/${i++}.png`;
-  image.alt = product.title;
-  title.textContent = product.title;
-  gender.textContent = "Category: " + product.gender;
-  price.textContent = "Price: $" + product.retailPrice;
-
-  productDiv.appendChild(image);
-  productDiv.appendChild(title);
-  productDiv.appendChild(gender);
-  productDiv.appendChild(price);
-  productDiv.appendChild(buyLink);
-  productContainer.appendChild(productDiv);
-}});
+    data.products.forEach((product) => {
+        if(product.gender.toLowerCase() == "women's") {
+            const productDiv = document.createElement("div");
+            const image = document.createElement("img");
+            const title = document.createElement("h5");
+            const gender = document.createElement("h6");
+            const price = document.createElement("p");
+            const button = document.createElement("button");
+            productDiv.id = "man";
+            button.textContent = "Buy Now";
+            button.className = "button";
+            button.id = `productButton_${product.id}`; // Assigning the product ID as the button's ID
+      
+            button.addEventListener("click", function () {
+              redirectToSinglePage(product.id);
+            });
+      
+            function redirectToSinglePage(productId) {
+              window.location.href = `singlepage.html?productId=${productId}`;
+            }
+      
+            image.src = `./images/collection/${i++}.png`;
+            image.alt = product.title;
+            title.textContent = product.title;
+            gender.textContent = "Category: " + product.gender;
+            price.textContent = "Price: $" + product.retailPrice;
+      
+            productDiv.appendChild(image);
+            productDiv.appendChild(title);
+            productDiv.appendChild(gender);
+            productDiv.appendChild(price);
+            productDiv.appendChild(button);
+            productContainer.appendChild(productDiv);
+        }
+    });
+  });

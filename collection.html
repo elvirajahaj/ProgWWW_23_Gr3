@@ -108,109 +108,45 @@
 
     <script src="./assets/dummydata.js"></script>
     <script>
-      const productContainer = document.getElementById("products-container");
-      let i = 1;
-      data.products.forEach((product) => {
-        const productDiv = document.createElement("div");
-        const image = document.createElement("img");
-        const title = document.createElement("h5");
-        const gender = document.createElement("h6");
-        const price = document.createElement("p");
-        const button = document.createElement("button");
-        const buyLink = document.createElement("a");
-        button.textContent = "Buy Now";
-        button.className = "button";
-        buyLink.href = "#";
-        buyLink.appendChild(button);
+          document.addEventListener("DOMContentLoaded", function () {
+        const productContainer = document.getElementById("products-container");
+        let i = 1;
 
-        image.src = `./images/collection/${i++}.png`;
-        image.alt = product.title;
-        title.textContent = product.title;
-        gender.textContent = "Category: " + product.gender;
-        price.textContent = "Price: $" + product.retailPrice;
+        data.products.forEach((product) => {
+          const productDiv = document.createElement("div");
+          const image = document.createElement("img");
+          const title = document.createElement("h5");
+          const gender = document.createElement("h6");
+          const price = document.createElement("p");
+          const button = document.createElement("button");
 
-        productDiv.appendChild(image);
-        productDiv.appendChild(title);
-        productDiv.appendChild(gender);
-        productDiv.appendChild(price);
-        productDiv.appendChild(buyLink);
-        productContainer.appendChild(productDiv);
+          button.textContent = "Buy Now";
+          button.className = "button";
+          button.id = `productButton_${product.id}`; // Assigning the product ID as the button's ID
+
+          button.addEventListener("click", function () {
+            redirectToSinglePage(product.id);
+          });
+
+          function redirectToSinglePage(productId) {
+            window.location.href = `singlepage.html?productId=${productId}`;
+          }
+
+          image.src = `./images/collection/${i++}.png`;
+          image.alt = product.title;
+          title.textContent = product.title;
+          gender.textContent = "Category: " + product.gender;
+          price.textContent = "Price: $" + product.retailPrice;
+
+          productDiv.appendChild(image);
+          productDiv.appendChild(title);
+          productDiv.appendChild(gender);
+          productDiv.appendChild(price);
+          productDiv.appendChild(button);
+          productContainer.appendChild(productDiv);
+        });
       });
     </script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <div id="products-container">
-      
-    </div>
-  </div>
-
-  <script src="./assets/dummydata.js"></script>
-  <script>
-    const productContainer = document.getElementById('products-container');
-    let i = 1;
-    data.products.forEach(product => {
-      const productDiv = document.createElement('div');
-      const image = document.createElement('img');
-      const title = document.createElement('h5');
-      const gender = document.createElement('h6');
-      const price = document.createElement('p');
-      const button = document.createElement('button');
-      const buyLink = document.createElement('a'); 
-
-  
-      image.crossOrigin = "anonymous";
-      image.src = `./images/collection/${i++}.png`; 
-      image.alt = product.title;
-    
-      title.textContent = product.title;
-      gender.textContent = 'Category: ' + product.gender;
-      price.textContent = 'Price: $' + product.retailPrice;
-      button.textContent = "Buy Now";
-      button.className = "button";
-      buyLink.href="#";
-      buyLink.appendChild(button);
-
-      productDiv.appendChild(image);
-      productDiv.appendChild(title);
-      productDiv.appendChild(gender);
-      productDiv.appendChild(price);
-      productDiv.appendChild(buyLink);
-
-      productContainer.appendChild(productDiv);
-    })
-  </script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script>
-    const apiUrl = 'https://example-data.draftbit.com/sneakers?_limit=10';
-
-    axios.get(apiUrl)
-      .then(response => {
-        const data = response.data;
-        console.log(data[0].media.imageUrl);
-        const container = document.getElementById("collection-container");
-
-        data.forEach(item => {
-          const sneakerItem = document.createElement('div');
-          sneakerItem.classList.add('sneaker-item');
-
-          const headerElement = document.createElement("h1");
-          headerElement.innerText = item.brand;
-
-          const header2Element = document.createElement("h3");
-          header2Element.innerText = item.title;
-
-          const imageElement = document.createElement('img');
-          imageElement.src = item.media.smallImageUrl;
-
-          sneakerItem.appendChild(headerElement);
-          sneakerItem.appendChild(header2Element);
-          sneakerItem.appendChild(imageElement);
-          container.appendChild(sneakerItem);
-        })
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  </script> -->
   </body>
 </html>
