@@ -52,5 +52,57 @@
         </nav>
       </header>
     </div>
+    <div class="login">
+      <div>
+        <img src="images/blackSneaker.png" alt="Black Sneaker" />
+      </div>
+      <div class="login-container">
+        <h2 style="color: white; font-size: 30px">Login to Sneek Peak</h2>
+        <form action="login.html" id="loginform">
+          <input
+            type="text"
+            placeholder="username"
+            id="username"
+            required
+          /><br />
+          <input
+            type="password"
+            minlength="8"
+            required
+            placeholder="password"
+          />
+          <br />
+          <button class="nextbtn">Next</button> <br />
+          <p style="color: white">
+            Not an SneekPeak member?
+            <a
+              href="register.html"
+              style="text-decoration-line: none; color: rgb(31, 81, 105)"
+              >Sing up here</a
+            >
+          </p>
+          <p id="errormessage"></p>
+        </form>
+      </div>
+    </div>
+    <div class="footer-wrapper">
+      <hr />
+      <footer>
+        <p>&copy; 2023 Your Website</p>
+        <ul>
+          <li>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+        </ul>
+        <div>
+          <label for="learnmore">More from us</label> <br />
+          <input type="text" name="email" placeholder="Email Address*" />
+          <br />
+          <input class="sub" type="button" value="Subscribe Now" requireds />
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
