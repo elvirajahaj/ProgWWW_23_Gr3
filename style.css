@@ -822,6 +822,14 @@ input{
     justify-content: flex-start;
 }
 
+.size-buttons table, tr, td, th{
+    background-color: #2c2c35;
+}
+
+.size-buttons table {
+    width: 100%; /* Set table width to 100% */
+}
+
 .mini-details h3 {
     background-color: #2c2c35;
 }
@@ -830,7 +838,7 @@ input{
     background-color: white;
     color: #1A1A22;
     border: 1px solid #1A1A22;
-    width: calc(20% - 10px);
+    width: 100px;
     height: 40px;
     display: flex;
     justify-content: center;
