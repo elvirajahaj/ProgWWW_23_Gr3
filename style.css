@@ -543,7 +543,7 @@ input{
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;
-   height: 100vh;
+  
    width: 40%;
    line-height: 10px;
    color: white;
@@ -621,6 +621,25 @@ input{
 .back-btn:hover {
     background-color: #037379;
     
+}
+.location-info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+   
+    
+}
+.map-class{
+    
+    width: 50%;
+    float: left;
+}
+.address{
+    width: 30%;
+    float: right;
+    margin-left: 20%;
+    margin-top: 8%;
 }
 
 .collection-search {
@@ -892,4 +911,17 @@ input{
 .nextbtn:hover {
     background-color: #037379;
     
+}
+.buttonAbout{
+    background-color: #0a8e95;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px 0;
+    
+}
+.buttonAbout:hover{
+    background-color: #037379;
 }
