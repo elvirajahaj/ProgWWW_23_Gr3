@@ -19,11 +19,19 @@
 
       address {
         margin-top: 120px;
+        color: white;
         font-style: italic;
       }
 
       .highlight {
         color: orange;
+      }
+      #map {
+        height: 400px;
+        width: 100%;
+        background-color: white;
+        position: relative;
+        z-index: 1;
       }
     </style>
   </head>
@@ -87,13 +95,6 @@
           </button>
           <button class="buttonLM">LEARN MORE</button>
         </div>
-        <address>
-          <p>Contact us at:</p>
-          <p>123 Main Street</p>
-          <p>Cityville, Country</p>
-          <p>Email: sneakers@shop.com</p>
-          <p>Phone: +1 (555) 123-4567</p>
-        </address>
       </div>
       <div class="aboutus-middle-img" id="aboutus-middle-img">
         <img
@@ -104,17 +105,43 @@
         />
       </div>
     </div>
+    <div class="location-info">
+      <div class="map-class">
+        <h1 style="color: white">Find our Location using map</h1>
+        <button class="buttonAbout" onclick="getLocation()">
+          Get Location
+        </button>
+        <p id="demo"></p>
+        <div id="map"></div>
+      </div>
+      <div class="address">
+        <canvas
+          id="canvasAddress"
+          width="300"
+          height="250"
+          style="border: 1px solid white"
+        >
+        </canvas>
+      </div>
+      >
+    </div>
     <div class="footer-wrapper">
       <hr />
       <footer>
         <p>&copy; 2023 Your Website</p>
         <ul>
           <li>
-            <i class="fa-brands fa-facebook" onclick="https://facebook.com"></i>
-            <i class="fa-brands fa-twitter" onclick="https://twitter.com"></i>
+            <i
+              class="fa-brands fa-facebook"
+              onclick="location.href='https://facebook.com'"
+            ></i>
+            <i
+              class="fa-brands fa-twitter"
+              onclick="location.href='https://facebook.com'"
+            ></i>
             <i
               class="fa-brands fa-instagram"
-              onclick="https://instagram.com"
+              onclick="location.href='https://facebook.com'"
             ></i>
           </li>
         </ul>
@@ -126,5 +153,94 @@
         </div>
       </footer>
     </div>
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          document.getElementById("demo").innerHTML =
+            "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        var userLatitude = position.coords.latitude;
+        var userLongitude = position.coords.longitude;
+        document.getElementById("demo").innerHTML = "Our Location";
+
+        initMap(userLatitude, userLongitude);
+      }
+
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            document.getElementById("demo").innerHTML =
+              "User denied the request for Geolocation.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            document.getElementById("demo").innerHTML =
+              "Location information is unavailable.";
+            break;
+          case error.TIMEOUT:
+            document.getElementById("demo").innerHTML =
+              "The request to get user location timed out.";
+            break;
+          case error.UNKNOWN_ERROR:
+            document.getElementById("demo").innerHTML =
+              "An unknown error occurred.";
+            break;
+        }
+      }
+
+      function initMap(userLatitude, userLongitude) {
+        var mapOptions = {
+          center: { lat: userLatitude, lng: userLongitude },
+          zoom: 10,
+        };
+
+        var map = new google.maps.Map(
+          document.getElementById("map"),
+          mapOptions
+        );
+
+        // Add a marker for the user's location
+        var userMarker = new google.maps.Marker({
+          position: { lat: userLatitude, lng: userLongitude },
+          map: map,
+          title: "Your Location",
+        });
+
+        var storeLatitude = 42.65604406873266;
+        var storeLongitude = 21.15431635347526;
+
+        var storeMarker = new google.maps.Marker({
+          position: { lat: storeLatitude, lng: storeLongitude },
+          map: map,
+          title: "Default Store Location",
+        });
+      }
+    </script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBet4ezl_F08PdwnufmKcJe3319oOCAji8"
+      async
+      defer
+    ></script>
+    <script>
+      var x = document.getElementById("canvasAddress");
+      var canvas2d = x.getContext("2d");
+      canvas2d.font = "normal 14px Arial";
+      canvas2d.strokeStyle = "white";
+      canvas2d.fillStyle = "white";
+      canvas2d.moveTo(0, 0);
+      canvas2d.lineTo(150, 100);
+      canvas2d.lineTo(350, -32);
+      canvas2d.stroke();
+      canvas2d.strokeText("Contact us at:", 20, 120);
+      canvas2d.strokeText("123 Main Street", 20, 140);
+      canvas2d.strokeText("Cityville, Country", 20, 160);
+      canvas2d.strokeText("Email: sneakers@shop.com", 20, 180);
+      canvas2d.strokeText("Phone: +1 (555) 123-4567", 20, 200);
+    </script>
   </body>
 </html>
